@@ -18,7 +18,7 @@ This project aims to analyze the effects of growth factors and treatments on gen
 ### Running the Code
 1. Clone the repository:
    ```bash
-   git clone https://github.com/<your-username>/gene-expression-analysis.git
+   git clone https://github.com/<harjotsingh990>/gene-expression-analysis.git
    ```
 2. Navigate to the project directory:
    ```bash
@@ -41,8 +41,3 @@ The analysis results are summarized in the following tables and figures:
 - Regression analysis results (Table 2)
 - Gene expression plots (Figures in the `figs` folder)
 
-## Contributors
-- Dr. Karl Berator, Institute of -omics Adelaide
-
-## License
-This project is licensed under the MIT License - see the LICENSE file for details.
