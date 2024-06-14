@@ -1,18 +1,19 @@
-
-# Loadig the targets package
+# Loading the targets package
 library(targets)
 
-# Definig the target script
+# Defining the target script
 tar_script({
-  # we are loadig necessary libraries
+  # We are loading necessary libraries
   library(ggplot2)
   
-  # we are definig the targets
+  # We are defining the targets
   list(
+    # Target to read the raw data from CSV file
     tar_target(
       raw_data,
-      read.csv("raw-data/gene_expression_data.csv")
+      read.csv("project/raw-data/gene_expression_data.csv")
     ),
+    # Target to create a plot of gene expression by concentration
     tar_target(
       gene_expression_by_concentration,
       {
@@ -23,10 +24,12 @@ tar_script({
           xlab("Concentration (µg/ml)") +
           ylab("Gene Expression") +
           theme_minimal()
-        ggsave("figs/gene_expression_by_concentration.png", plot = p)
+        # Save the plot to figs directory
+        ggsave("project/figs/gene_expression_by_concentration.png", plot = p)
         p
       }
     ),
+    # Target to create a boxplot of gene expression by treatment
     tar_target(
       gene_expression_by_treatment,
       {
@@ -36,18 +39,20 @@ tar_script({
           xlab("Treatment") +
           ylab("Gene Expression") +
           theme_minimal()
-        ggsave("figs/gene_expression_by_treatment.png", plot = p)
+        # Save the plot to figs directory
+        ggsave("project/figs/gene_expression_by_treatment.png", plot = p)
         p
       }
     )
   )
 })
 
-# we are settig up the options for the target package
+# We are setting up the options for the target package
 tar_option_set(
   packages = c("ggplot2")
 )
 
-# we are defining the output directories
+# We are defining the output directories
 tar_make_clustermq()
+
 
