@@ -11,19 +11,6 @@ This project involves analyzing the effects of different treatments and growth f
 - `tabs`: Includes tabulated data and reports.
 - `target`: Saves data, code, figures, tables, and other outputs sorted by date.
 
-## How to Run the Code
-1. Clone the repository:
-   ```sh
-   git clone <repository_link>
-   cd project
-   ```
-
-2. Ensure you have R and the necessary packages installed.
-
-3. Run the R scripts located in the r-code directory:
-   ```sh
-   Rscript r-code/gene_expression_analysis.R
-   ```
 
 ## Analysis Process
 
@@ -54,6 +41,3 @@ Descriptive statistics and visualizations show distinct patterns across differen
 - Wang, M., Li, Q., & Liu, L. (2023). Factors and methods for the detection of gene expression regulation. Biomolecules, 13(2), 304. doi:10.3390/biom13020304.
 - Waddington, C. (2008). Introduction to the gene expression and regulation topic room. Nature Education, 1(1), 160.
 
-## Future Work
-- Expand the analysis to include a broader range of cell types and larger sample sizes.
-- Explore additional factors influencing gene expression and incorporate advanced modeling techniques.
